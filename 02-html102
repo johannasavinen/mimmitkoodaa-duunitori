@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>Mimmit koodaa to do</title>
+  </head>
+  
+  <body>
+    <h1>Mun oma todo-sovellus!</h1>
+    <input type="text">
+    <ul>
+      <li>Tee sovellus</li>
+      <li>Tee siitä kivan näköinen</li>
+      <li>Laita se toimimaan</li>
+    </ul>
+  </body>
+</html>
