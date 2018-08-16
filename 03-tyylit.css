@@ -1,35 +1,36 @@
 body {
-  // ASETTELU
+  /* ASETTELU */
   
-  // pidetään todo-lista sopivan kapeana
+  /* pidetään todo-lista sopivan kapeana */
   max-width: 600px;
   
-  // keskitetään sivulla ni ei tuu niin ahdas fiilis
+  /* keskitetään sivulla ni ei tuu niin ahdas fiilis */
   margin: 0 auto;
   
-  // laitetaan ylös ja alas vähän tilaa ni ei tuu niin ahdas fiilis
+  /* laitetaan ylös ja alas vähän tilaa ni ei tuu niin ahdas fiilis */
   padding: 60px 0;
   
-  // FONTIT
-  font-family: Verdana; // valitse fontti
-  font-size: 20px; // valitse koko
+  /* FONTIT */
+  font-family: Verdana;
+  font-size: 20px;
   
-  // VÄRIT
-  color: #393838; // tekstien väri
-  background-color: #f2f2f2; // taustan väri
+  /* VÄRIT */
+  color: #393838;
+  background-color: #f2f2f2;
 }
 
-// INPUT-KENTTÄ
+/* INPUT-KENTTÄ */
 input {
-  // kuten huomattiin, inputkentissä on oletuksena reunat. Otetaan ne pois
+  /* kuten huomattiin, inputkentissä on oletuksena reunat. Otetaan ne pois */
   border: 0;
   
-  // laitetaan kuitenkin alas reuna, jotta tiedetään, missä input-kenttä viilettää
+  /* laitetaan kuitenkin alas reuna, jotta tiedetään, missä input-kenttä viilettää */
   border-bottom: 1px solid #393838;
 }
 
-// LISTAUS
+/* LISTAUS */
 ul {
-  // bullet pointit on rumia. otetaan ne pois
-  list-style: none; // mikä tää nyt oikeesti oli?
+  /* bullet pointit on rumia. otetaan ne pois */
+  /* mikä tää nyt oikeesti oli? */
+  list-style: none;
 }
