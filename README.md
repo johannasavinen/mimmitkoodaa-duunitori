@@ -4,7 +4,7 @@ Resources used at our Mimmit Koodaa workshop.
 
 # Workshop Outline
 
-## 01 - RAKENNE
+## 101 - RAKENNE
 Mikä on nettisaitti ja miten sellainen tehdään?
 - Mikä on nettisaitti? Miten muutamasta tekstitiedostosta tulee nettisaitit?
 - Mikä on rakenteen, tyylien ja toiminnallisuuksien ero?
@@ -50,7 +50,7 @@ Tekstiä, jossa on tietyin standardein merkattuja juttuja
 </form>
 ```    
 
-## 02 - Tyylit
+## 201 - Tyylit
 Miten saadaan aiemmin tehdyt palikat näyttämään siltä miltä me halutaan niiden näyttävän?
 
 ##### Random thought
@@ -60,7 +60,7 @@ Pitäiskö tässä välissä näyttää meiän tyylittelemä versio ja sit kulke
 Tähän väliin tarttis miettiä et missä järjestyksessä css-jutut kannattaa käydä läpi. Tavallaan värit ja fontit on aika selkee selittää ja siks hyvä piste alottaa. Toisaalta ite ainakin lähen normaalisti liikkeelle isommista viivoista ja yleisestä asettelusta ja rakenteesta ja sit siitä siirryn vasta väreihin ja fontteihin ja sit whitespaceen.
 ```
 
-## 03 - Luokat
+## 202 - Luokat
 Miten me saadaan jotkut listalla olevista asioista tehdyn näkösiksi?
 
 ### Class-attribuutti
@@ -69,7 +69,7 @@ Tässä esimerkissä tarvitaan "done" luokka (voi nimetä miten haluaa) ja laitt
 
 CSS:ssä luokkia tyylitellessä käytetään pistettä jotta ne erottuu perus tägeistä.
 
-## 04 - Toiminnallisuus
+## 301 - Toiminnallisuus
 Meiän todo-lista on nyt valmis. Voidaan käyttää sitä niin että koodiin mennään lisäilemään uusia rivejä ja lisätään ja done-luokka jo tehdyille taskeille. Tää on vaan ehkä paskin käyttöliittymä mitä ihmiskunta on keksiny.
 
 Aika-ajoin tai oikeestaan aika usein tulee sellasia tilanteita, että halutaan saada nettisaitilla tehdyt klikkaukset tekemään muutakin kuin siirtymään sivulta toiselle. Silloin tarvitaan javascriptiä.
@@ -77,7 +77,7 @@ Aika-ajoin tai oikeestaan aika usein tulee sellasia tilanteita, että halutaan s
 ##### Random thought
 Halutaanko tehdä staten kautta vai suoraan domiin? Veikkaisin että state on konseptina vaikeempi saada hakattuu jengin päähän mut toisaalta modernimpi ja pidemmän päälle käytännöllisempi tapa tehdä juttuja.
 
-## 05 - Bonus features and customisation
+## 3XX - Bonus features and customisation
 Kun saitti/softa on siinä vaiheessa, että asiat on about paikallaan, ei näytä ihan perseeltä ja toimiikin joten kuten, voidaan alkaa miettimään mitä muuta kivaa halutaan tehdä. Tässä vaiheessa voidaan alkaa lisäämään monipuolisempia elementtejä (ohjeet, eri tärkeystasot taskeille), hienompaa ulkoasua (kuvia, ikoneita, tarkempaa hinkkausta...), tai uusia toiminnallisuuksia (tietojen tallentaminen, vanhojen juttujen poistaminen...).
 
 Tässä vaiheessa on tärkeää priorisoida ja tehdä valintoja mikä tekee palvelusta helpompaa käyttää ja mikä vaan monimutkaistaa asioita. Tehtävien uudelleenjärjestely voi helpottaa käyttöä, kuten voi eri tärkeysasteet, mutta kun yksinkertaiseen todo-listaan alkaa lisäämään liikaa avainsanoja, tägejä, prioriteettitasoja, sijainteja, kalentereja ym, tullaan helposti feature creeppiin.
