@@ -36,9 +36,9 @@ Tekstiä, jossa on tietyin standardein merkattuja juttuja
 ### HTML-koodin alkeet
 
 - Tägi = `<tägin_nimi>`
-    - Esim. <input> = input-kenttä
+    - Esim. `<input>` = input-kenttä
 - Jotkut, tai oikeestaan suurin osa tägeistä alkaa ja loppuu = `<tägin_nimi> ... </tägin_nimi>`
-    - Esim. <h1>Moimoi</h1> = heading 1 = 1. tason otsikko
+    - Esim. `<h1>Moimoi</h1>` = heading 1 = 1. tason otsikko
 - HTML-tägit on ei-ees-kovin-paljoa-yksinkertaistaen kasa laatikoita toisten laatikoiden sisällä
     - Esim.
 ```HTML
@@ -48,7 +48,7 @@ Tekstiä, jossa on tietyin standardein merkattuja juttuja
     <input type="email">
     <input type="text">
 </form>
-```    
+```
 
 ## 201 - Tyylit
 Miten saadaan aiemmin tehdyt palikat näyttämään siltä miltä me halutaan niiden näyttävän?
@@ -83,7 +83,7 @@ Halutaanko tehdä staten kautta vai suoraan domiin? Veikkaisin että state on ko
 ### Javascriptin perusteet
 Avainero html:n sekä css:n ja javascriptin välillä on ohjelmointi. Html & css = merkkaus. Noilla kirjoitetaan miten asiat on ja miltä niiden tulee näyttää, ei muuta. Javascriptillä pystytään tekemään interaktiivisuutta ja reagoimaan esimerkiksi käyttäjän tekosiin tai mihin tahansa muuhun ulkopuoliseen juttuun.
 
-Jotta pystytään tekemään ja reagoimaan erilaisiin tilanteisiin, 
+Jotta pystytään tekemään ja reagoimaan erilaisiin tilanteisiin,
 
 #### Tyypit
 - String
@@ -183,7 +183,7 @@ todo.forEach(function(item) {
 Toi for-loopin syntaksi on ihan perseestä ja sen selittäminen vie paljon aikaa, mielummin lähtisin tekemään foreach tai map tai mitä vaan muuta mut toisaalta toi on niiiin perustava asia et sen vois kuitenkin ehkä koittaa käydä läpi.
 
 ### If
-Ehdolliset jutut on toinen tapa tehdä flow-controllia, ja tavallaan ehkä jännempi näistä kahdesta. If-lauseke tarkoittaa käytännössä sitä, että ajetaan joku tietty osa ohjelmasta vaan, jos joku ehto on tosi. Esimerkiksi, annetaan listan elementeille luokka 'done' jos ja vain jos kyseinen tehtävä on oikeesti tehty. 
+Ehdolliset jutut on toinen tapa tehdä flow-controllia, ja tavallaan ehkä jännempi näistä kahdesta. If-lauseke tarkoittaa käytännössä sitä, että ajetaan joku tietty osa ohjelmasta vaan, jos joku ehto on tosi. Esimerkiksi, annetaan listan elementeille luokka 'done' jos ja vain jos kyseinen tehtävä on oikeesti tehty.
 
 ```javascript
 if (task_state === 'done') {
