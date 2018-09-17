@@ -1,0 +1,57 @@
+
+<html>
+  <head>
+    <title>Mimmit koodaa to do</title>
+    <link rel="stylesheet" href="202-classes.css">
+  </head>
+  
+  <body>
+    <h1>Mun oma todo-sovellus!</h1>
+    <input type="text">
+    <button type="submit">Lisää tehtävä</button>
+    <ul>
+      <li class="done">Tee sovellus</li>
+      <li class="done">Tee siitä kivan näköinen</li>
+      <li>Laita se toimimaan</li>
+    </ul>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDZrvIXHig9GDl8cgFtXmTYheOVnnp-dAU",
+        authDomain: "todo-app-f7a03.firebaseapp.com",
+        databaseURL: "https://todo-app-f7a03.firebaseio.com",
+        projectId: "todo-app-f7a03",
+        storageBucket: "todo-app-f7a03.appspot.com",
+        messagingSenderId: "153458446362"
+      };
+      firebase.initializeApp(config);
+
+
+      //writeNewTodoData('New Todo')
+      readTodoData()
+
+
+      function writeNewTodoData(name) {
+        var newTodoKey = firebase.database().ref().child('todos').push().key;
+        firebase.database().ref('todos/' + newTodoKey).set({
+          name: name,
+          done: false
+        });
+      }
+
+      function readTodoData() {
+        firebase.database().ref('todos').on('value', function(snapshot) {
+          snapshot.forEach(function(childSnapshot) {
+            var childData = childSnapshot.val();
+            console.log(childData.name)
+            console.log(childData.done)
+          });
+        });
+      }
+    </script>
+
+    <script src="301-makeithappen.js"></script>
+  </body>
+</html>
