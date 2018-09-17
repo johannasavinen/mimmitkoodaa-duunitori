@@ -234,4 +234,4 @@ Kun saitti/softa on siinä vaiheessa, että asiat on about paikallaan, ei näyt�
 Tässä vaiheessa on tärkeää priorisoida ja tehdä valintoja mikä tekee palvelusta helpompaa käyttää ja mikä vaan monimutkaistaa asioita. Tehtävien uudelleenjärjestely voi helpottaa käyttöä, kuten voi eri tärkeysasteet, mutta kun yksinkertaiseen todo-listaan alkaa lisäämään liikaa avainsanoja, tägejä, prioriteettitasoja, sijainteja, kalentereja ym, tullaan helposti feature creeppiin.
 
 ##### TODO:
-Voitais vaikka tehdä valmiiks muutama eri toiminnallisuus ja antaa tyyppien valita mitä he haluavat tehdä ja tyyliin mennä pienempiin ryhmiin sen mukaan mitä kukakin haluu tehdä tmv
+Voitais vaikka tehdä valmiiks muutama eri toiminnallisuus ja antaa tyyppien valita mitä he haluavat tehdä ja tyyliin mennä pienempiin ryhmiin sen mukaan mitä kukakin haluu tehdä tmv testr
