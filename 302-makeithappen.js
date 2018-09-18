@@ -13,6 +13,8 @@ firebase.initializeApp(config);
 
 
 readTodos()
+addNewTodo('Tämä on kaikista uusin')
+
 
 
 function addNewTodo(name) {
@@ -23,6 +25,7 @@ function addNewTodo(name) {
 function readTodos() {
   firebase.database().ref('todos').on('value', function(snapshot) {
     var todos = document.getElementById('todos');
+    todos.innerHTML = '';
     snapshot.forEach(function(childSnapshot) {
       var childData = childSnapshot.val();
       console.log(childSnapshot.key)
@@ -35,7 +38,7 @@ function readTodos() {
         elem.className = 'done';
       }
       elem.innerHTML = childData.name
-      document.getElementById('todos').appendChild(elem)
+      todos.appendChild(elem)
 
     });
   });
