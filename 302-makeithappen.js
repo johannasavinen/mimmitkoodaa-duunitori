@@ -27,24 +27,7 @@ function readTodos() {
   firebase
     .database()
     .ref('todos')
-    .on('value', function(snapshot) {
-      var todos = document.getElementById('todos');
-      todos.innerHTML = '';
-      snapshot.forEach(function(childSnapshot) {
-        var childData = childSnapshot.val();
-        console.log(childSnapshot.key);
-        console.log(childData.name);
-        console.log(childData.done);
-
-        var elem = document.createElement('li');
-
-        if (childData.done) {
-          elem.className = 'done';
-        }
-        elem.innerHTML = childData.name;
-        todos.appendChild(elem);
-      });
-    });
+    .on('value', updateDOM);
 }
 
 function updateTodo(key, name, done) {
@@ -62,4 +45,24 @@ function removeTodo(key) {
     .database()
     .ref('todos/' + key)
     .remove();
+}
+
+function updateDOM(snapshot) {
+  // Valitse sivulta ul-elementti
+  var todos = document.getElementById('todos');
+  todos.innerHTML = '';
+  snapshot.forEach(function(childSnapshot) {
+    var childData = childSnapshot.val();
+    console.log(childSnapshot.key);
+    console.log(childData.name);
+    console.log(childData.done);
+
+    var elem = document.createElement('li');
+
+    if (childData.done) {
+      elem.className = 'done';
+    }
+    elem.innerHTML = childData.name;
+    todos.appendChild(elem);
+  });
 }
