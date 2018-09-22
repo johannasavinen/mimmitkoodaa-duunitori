@@ -1,19 +1,3 @@
-// Tee jotain kivaa ja silleen
-
-// Initialize Firebase
-var config = {
-  apiKey: 'AIzaSyDZrvIXHig9GDl8cgFtXmTYheOVnnp-dAU',
-  authDomain: 'todo-app-f7a03.firebaseapp.com',
-  databaseURL: 'https://todo-app-f7a03.firebaseio.com',
-  projectId: 'todo-app-f7a03',
-  storageBucket: 'todo-app-f7a03.appspot.com',
-  messagingSenderId: '153458446362',
-};
-firebase.initializeApp(config);
-
-readTodos();
-addNewTodo('Tämä on kaikista uusin');
-
 function addNewTodo(name) {
   var newTodoKey = firebase
     .database()
@@ -66,3 +50,18 @@ function updateDOM(snapshot) {
     todos.appendChild(elem);
   });
 }
+
+// Firebase-tietokannan asetukset
+var config = {
+  apiKey: 'AIzaSyDZrvIXHig9GDl8cgFtXmTYheOVnnp-dAU',
+  authDomain: 'todo-app-f7a03.firebaseapp.com',
+  databaseURL: 'https://todo-app-f7a03.firebaseio.com',
+  projectId: 'todo-app-f7a03',
+  storageBucket: 'todo-app-f7a03.appspot.com',
+  messagingSenderId: '153458446362',
+};
+// Avaa yhteys Firbase-tietokantaan
+firebase.initializeApp(config);
+
+// Lue tietokannasta tämänhetkinen todo-lista
+readTodos();
