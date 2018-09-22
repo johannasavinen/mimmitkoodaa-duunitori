@@ -1,19 +1,19 @@
 body {
   /* ASETTELU */
-  
+
   /* pidetään todo-lista sopivan kapeana */
   max-width: 600px;
-  
+
   /* keskitetään sivulla ni ei tuu niin ahdas fiilis */
   margin: 0 auto;
-  
+
   /* laitetaan ylös ja alas vähän tilaa ni ei tuu niin ahdas fiilis */
   padding: 60px 0;
-  
+
   /* FONTIT */
   font-family: Verdana;
   font-size: 20px;
-  
+
   /* VÄRIT */
   color: #393838;
   background-color: #f2f2f2;
@@ -23,7 +23,7 @@ body {
 input {
   /* kuten huomattiin, inputkentissä on oletuksena reunat. Otetaan ne pois */
   border: 0;
-  
+
   /* laitetaan kuitenkin alas reuna, jotta tiedetään, missä input-kenttä viilettää */
   border-bottom: 1px solid #393838;
 }
