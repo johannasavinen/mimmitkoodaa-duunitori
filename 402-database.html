@@ -1,48 +1,50 @@
-
 <html>
-  <head>
-    <title>Mimmit koodaa to do</title>
-    <link rel="stylesheet" href="202-classes.css">
-  </head>
-  
-  <body>
-    <h1>Mun oma todo-sovellus!</h1>
-    <input type="text">
-    <button type="submit">Lisää tehtävä</button>
-    <ul>
-      <li class="done">Tee sovellus</li>
-      <li class="done">Tee siitä kivan näköinen</li>
-      <li>Laita se toimimaan</li>
-    </ul>
 
-    <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyDZrvIXHig9GDl8cgFtXmTYheOVnnp-dAU",
-        authDomain: "todo-app-f7a03.firebaseapp.com",
-        databaseURL: "https://todo-app-f7a03.firebaseio.com",
-        projectId: "todo-app-f7a03",
-        storageBucket: "todo-app-f7a03.appspot.com",
-        messagingSenderId: "153458446362"
-      };
-      firebase.initializeApp(config);
+<head>
+  <meta charset="UTF-8">
+  <title>Mimmit koodaa to do</title>
+  <link rel="stylesheet" href="202-classes.css">
+</head>
 
-      // Set Todos firebase object
-      var todos = firebase.database().ref('/todos');
+<body>
+  <h1>Mun oma todo-sovellus!</h1>
+  <input type="text">
+  <button type="submit">Lisää tehtävä</button>
+  <ul>
+    <li class="done">Tee sovellus</li>
+    <li class="done">Tee siitä kivan näköinen</li>
+    <li>Laita se toimimaan</li>
+  </ul>
 
-      writeNewTodoData('New Todo')
+  <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDZrvIXHig9GDl8cgFtXmTYheOVnnp-dAU",
+      authDomain: "todo-app-f7a03.firebaseapp.com",
+      databaseURL: "https://todo-app-f7a03.firebaseio.com",
+      projectId: "todo-app-f7a03",
+      storageBucket: "todo-app-f7a03.appspot.com",
+      messagingSenderId: "153458446362"
+    };
+    firebase.initializeApp(config);
+
+    // Set Todos firebase object
+    var todos = firebase.database().ref('/todos');
+
+    writeNewTodoData('New Todo')
 
 
-      function writeNewTodoData(name) {
-        var newTodoKey = firebase.database().ref().child('todos').push().key;
-        firebase.database().ref('todos/' + newTodoKey).set({
-          name: name,
-          done: false
-        });
-      }
-    </script>
+    function writeNewTodoData(name) {
+      var newTodoKey = firebase.database().ref().child('todos').push().key;
+      firebase.database().ref('todos/' + newTodoKey).set({
+        name: name,
+        done: false
+      });
+    }
+  </script>
 
-    <script src="301-makeithappen.js"></script>
-  </body>
+  <script src="301-makeithappen.js"></script>
+</body>
+
 </html>
