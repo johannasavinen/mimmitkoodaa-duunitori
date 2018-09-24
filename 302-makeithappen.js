@@ -37,15 +37,14 @@ function updateDOM(snapshot) {
   todos.innerHTML = '';
   snapshot.forEach(function(childSnapshot) {
     var childData = childSnapshot.val();
-    console.log(childSnapshot.key);
-    console.log(childData.name);
-    console.log(childData.done);
 
     var elem = document.createElement('li');
 
     if (childData.done) {
       elem.className = 'done';
     }
+
+    elem.setAttribute('data-dbkey', childSnapshot.key);
     elem.innerHTML = childData.name;
     todos.appendChild(elem);
   });
@@ -65,3 +64,17 @@ firebase.initializeApp(config);
 
 // Lue tietokannasta tämänhetkinen todo-lista
 readTodos();
+
+document.addEventListener('submit', function(event) {
+  event.preventDefault();
+  addNewTodo(document.getElementById('task-input').value);
+});
+
+document.addEventListener('click', function(event) {
+  console.log(event.target);
+  updateTodo(
+    event.target.getAttribute('dbkey'),
+    event.target.innerHTML,
+    !event.target.classList.contains('done')
+  );
+});
