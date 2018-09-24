@@ -39,7 +39,6 @@ function updateDOM(snapshot) {
     var childData = childSnapshot.val();
 
     var elem = document.createElement('li');
-
     if (childData.done) {
       elem.className = 'done';
     }
@@ -71,9 +70,8 @@ document.addEventListener('submit', function(event) {
 });
 
 document.addEventListener('click', function(event) {
-  console.log(event.target);
   updateTodo(
-    event.target.getAttribute('dbkey'),
+    event.target.dataset.dbkey,
     event.target.innerHTML,
     !event.target.classList.contains('done')
   );
