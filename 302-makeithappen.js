@@ -15,13 +15,15 @@ function readTodos() {
 }
 
 function updateTodo(key, name, done) {
-  firebase
-    .database()
-    .ref('todos/' + key)
-    .set({
-      name: name,
-      done: done,
-    });
+  if (key) {
+    firebase
+      .database()
+      .ref('todos/' + key)
+      .set({
+        name: name,
+        done: done,
+      });
+  }
 }
 
 function removeTodo(key) {
