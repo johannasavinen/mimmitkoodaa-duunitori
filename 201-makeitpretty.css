@@ -12,11 +12,14 @@ body {
 
   /* FONTIT */
   font-family: Verdana;
-  font-size: 20px;
+  font-size: 18px;
 
   /* VÄRIT */
   color: #393838;
   background-color: #f2f2f2;
+
+  /* keskitetään kaikki */
+  text-align: center;
 }
 
 /* INPUT-KENTTÄ */
@@ -25,7 +28,24 @@ input {
   border: 0;
 
   /* laitetaan kuitenkin alas reuna, jotta tiedetään, missä input-kenttä viilettää */
-  border-bottom: 1px solid #393838;
+  border-bottom: 1px solid #00c4b1;
+
+  /* säädetään kenttä vähän isommaksi, niin sitä on helpompi käyttää */
+  height: 50px;
+  width: 65%;
+  padding: 20px;
+
+  /* hauskat pyöritetyt reunat tännekin */
+  border-radius: 30px;
+
+  /* suurennataan fonttikokoa, oletuksena tosi pieni */
+  font-size: 16px;
+}
+
+/* oletukena input-kentässä sininen hohto - otetaan tämä pois ja lisätään oma effekti tilalle */
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #098e81;
 }
 
 /* LISTAUS */
@@ -33,4 +53,48 @@ ul {
   /* bullet pointit on rumia. otetaan ne pois */
   /* mikä tää nyt oikeesti oli? */
   list-style: none;
+  padding: 10px 0;
+}
+
+/* tehdään myös yksittäisistä täskeistä kivan näköisiä */
+
+li {
+  /* erotellaan ne lisäämällä vähän tilaa */
+  padding: 20px;
+  margin: 10px 0;
+
+  /* lisätään taustaväri niin erottuu */
+  background: #fff;
+
+  /* hauskat pyöritetyt reunat tännekin */
+  border-radius: 5px;
+
+  /* näitä ei haluta keskittää */
+  text-align: left;
+}
+
+/* LISÄÄ-NAPPULASTA VÄHÄN NÄTIMPI */
+button {
+  /* nappula on nyt vähän pieni, suurennetaan sitä */
+  width: 33%;
+  /* lisätään tilaa buttonin sisäpuolelle, niin saadaan sille lisää korkeutta */
+  padding: 15px;
+
+  /* lisätään kiva väri taustalle, niin nappula näkyy paremmin */
+  background-color: #00c4b1;
+
+  /*voitaisiin kokeilla vaihtaa tekstin väri vaikka valkoiseksi */
+  color: #ffffff;
+
+  /*teksti silti kyllä aika pientä, suurennetaan sitä vähän */
+  font-size: 16px;
+
+  /* viimeistellään hauskoilla pyöritetyillä reunoilla */
+  border-radius: 30px;
+}
+
+/* LISÄTÄÄN NAPPULALLE HOVER (onko too much?) */
+button:hover {
+  /* näytetään effekti kun hiiren laittaa buttonin päälle eli taustaväri voisi vaihtua tässä */
+  background-color: #098e81;
 }
