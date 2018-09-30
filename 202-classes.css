@@ -71,6 +71,14 @@ li {
 
   /* näitä ei haluta keskittää */
   text-align: left;
+
+  /* lisätään kiva pallura mukaan kuvioihin ja asetellaan se*/
+  background-image: url(not_done.svg);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 16px 16px;
+  padding-left: 55px;
+
 }
 
 /* LISÄÄ-NAPPULASTA VÄHÄN NÄTIMPI */
@@ -101,5 +109,7 @@ button:hover {
 
 .done {
   text-decoration: line-through;
-  color: #b7b7b7;
+  color: #94A1B2;
+  /* tarvitaan myös done-pallura */
+  background-image: url(done.svg);
 }
