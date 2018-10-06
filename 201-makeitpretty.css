@@ -93,7 +93,7 @@ button {
   border-radius: 30px;
 }
 
-/* LISÄTÄÄN NAPPULALLE HOVER (onko too much?) */
+/* LISÄTÄÄN NAPPULALLE HOVER */
 button:hover {
   /* näytetään effekti kun hiiren laittaa buttonin päälle eli taustaväri voisi vaihtua tässä */
   background-color: #098e81;
